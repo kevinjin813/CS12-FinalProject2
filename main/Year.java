@@ -19,4 +19,9 @@ public class Year {
 		String result=months[month].takeOut(x);
 		return result;
 	}
+	public String takeAllLetter(int month)
+	{
+		String[] messages=months[month].takeAll();
+		return messages.toString();
+	}
 }
