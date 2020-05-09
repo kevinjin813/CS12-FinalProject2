@@ -12,10 +12,11 @@ public class Year {
 	
 	public void receiveLetter(int month,String mail)
 	{
-		if(month>12 || month<0)
-		{
-			throw new Exception();
-		}
 		months[month].takeIn(mail);
+	}
+	public String takeithLetter(int month,int x)
+	{
+		String result=months[month].takeOut(x);
+		return result;
 	}
 }

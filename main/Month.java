@@ -17,7 +17,7 @@ public class Month {
 	}
 	public String takeOut(int x)
 	{
-		String result=message.get(x);
+		String result="Message "+x+" to you is: "+message.get(x);
 		return result;
 	}
 	public String[] takeAll()
