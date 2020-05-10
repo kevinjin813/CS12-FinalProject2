@@ -49,7 +49,8 @@ public class Year {
 	{
 		String result="";
 		for(Month i:months)
-		{
+		{	
+			if(i!=null)
 			result=result+"In "+i.month+" "+year+", you have received "+i.num+" emails.\n";
 		}
 		return result;
