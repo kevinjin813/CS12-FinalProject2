@@ -12,12 +12,12 @@ public class Month {
 	}
 	public void takeIn(String message)
 	{
-		num=num++;
-		this.message.add(num, message);
+		num++;
+		this.message.add(message);
 	}
 	public String takeOut(int x)
 	{
-		String result="Message "+x+" to you is: "+message.get(x);
+		String result="Message "+x+" to you is: "+message.get(x-1);
 		return result;
 	}
 	public String[] takeAll()
@@ -27,12 +27,13 @@ public class Month {
 		for(String i:message)
 		{
 		   result[k-1]="Message "+k+" to you is: "+i+"\n";
+		   k++;
 		}
 		return result;
 	}
 	public void delete(int x)
 	{
-		message.remove(x);
+		message.remove(x-1);
 		num--;
 	}
 	public void deleteAll()

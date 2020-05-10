@@ -1,7 +1,9 @@
 package main;
 
+import java.util.Arrays;
+
 public class Year {
-	Month[] months=new Month[12];
+	Month[] months=new Month[13];
 	Year next;
 	Year prev;
 	int year;
@@ -28,6 +30,11 @@ public class Year {
 	{
 		String[] messages=months[month].takeAll();
 		months[month].deleteAll();
-		return messages.toString();
+		String result="";
+		for(int i=0;i<=messages.length-1;i++)
+		{
+			result=result+messages[i];
+		}
+		return result;
 	}
 }
