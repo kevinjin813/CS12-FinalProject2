@@ -12,6 +12,6 @@ public class DLLTest {
 		
 		timeLine.insert(2024, 11, "I love you");
 		//assertEquals("I love you",timeLine.delete(2024, 11, 1));
-		assertEquals("I am here for you",timeLine.delete(2024, 11, 3));
+		assertEquals("Message 1 to you is: I am here for you",timeLine.delete(2024, 11, 1));
 	}
 }

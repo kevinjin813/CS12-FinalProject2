@@ -12,6 +12,10 @@ public class Year {
 	
 	public void receiveLetter(int month,String mail)
 	{
+		if(months[month]==null)
+		{
+			months[month]=new Month(month);
+		}		
 		months[month].takeIn(mail);
 	}
 	public String takeithLetter(int month,int x)

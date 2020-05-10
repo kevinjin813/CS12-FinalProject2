@@ -19,7 +19,7 @@ public class DLL {
 		{
 			curr=curr.next;
 		}
-		if(curr!=temp)
+		if(curr.year!=temp.year)
 		{
 			return null;
 		}
