@@ -48,11 +48,11 @@ public class TimeEmail {
 		     System.out.println("Which year and month do you want to read in the future?");
 		     int year = inn.nextInt();
 		     int month = inn.nextInt();
-		     
+		     inn.nextLine();
 		     System.out.println("What's your message?");
 		     String message = inn.nextLine();
 		     timeLine.insert(year, month, message);
-		     System.out.println("\n");
+		     System.out.println("Your message is recieved.\n");
 		     }
 		   }
 	   System.out.println("Thanks for using our system!");
