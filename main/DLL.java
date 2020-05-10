@@ -29,7 +29,17 @@ public class DLL {
 		}
 		
 	}
-	
+	public boolean have(int x)
+	{
+		if(contain(x)==null)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 	public void insert(int x,int y,String message)
 	{
 		Year temp=new Year(x);
@@ -38,7 +48,13 @@ public class DLL {
 		{
 			head=temp;
 		}
-		
+		if(head.year>x)
+		{
+			temp.next=curr.next;
+			temp.prev=curr.prev;
+			curr.prev=temp;
+			head=temp;
+		}
 		if(contain(x)!=null)
 		{
 			curr=contain(x);
@@ -46,7 +62,7 @@ public class DLL {
 		}
 		if(contain(x)==null)
 		{
-			while(curr!=null && curr.year<x)
+			while(curr.next!=null && curr.year<x)
 			{
 				curr=curr.next;
 			}
@@ -56,10 +72,16 @@ public class DLL {
 			temp.prev=curr;
 		}
 	}
-	public void delete(int x,int y,int i)
+	public String delete(int x,int y,int i)
 	{
 		Year curr=contain(x);
-		curr.takeithLetter(y, i);
-		
+		String result=curr.takeithLetter(y, i);
+		return result;
+	}
+	public String deleteAll(int x,int y)
+	{
+		Year curr=contain(x);
+		String result=curr.takeAllLetter(y);
+		return result;
 	}
 }

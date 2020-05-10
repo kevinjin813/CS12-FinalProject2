@@ -33,5 +33,11 @@ public class Month {
 	public void delete(int x)
 	{
 		message.remove(x);
+		num--;
+	}
+	public void deleteAll()
+	{
+		message.clear();
+		num=0;
 	}
 }

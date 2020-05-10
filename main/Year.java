@@ -17,11 +17,13 @@ public class Year {
 	public String takeithLetter(int month,int x)
 	{
 		String result=months[month].takeOut(x);
+		months[month].delete(x);
 		return result;
 	}
 	public String takeAllLetter(int month)
 	{
 		String[] messages=months[month].takeAll();
+		months[month].deleteAll();
 		return messages.toString();
 	}
 }
