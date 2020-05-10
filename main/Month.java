@@ -30,4 +30,8 @@ public class Month {
 		}
 		return result;
 	}
+	public void delete(int x)
+	{
+		message.remove(x);
+	}
 }
