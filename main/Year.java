@@ -55,4 +55,13 @@ public class Year {
 		}
 		return result;
 	}
+	public boolean detect(int y)
+	{
+		if(months[y].num!=0)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
 }

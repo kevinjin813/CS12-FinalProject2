@@ -102,6 +102,8 @@ public class DLL {
 	}
 	public String haveMessage(int x)
 	{
+		if(head==null)
+			return "There's no message yet, please write some message to yourself.";
 		String result="";
 		Year curr=head;
 		result=result+curr.count_message();
@@ -111,5 +113,16 @@ public class DLL {
 			result=result+curr.count_message();
 		}
 		return result;
+	}
+	public boolean detect(int x,int y)
+	{
+		if(!have(x))
+		{
+			return false;
+		}
+		else
+		{
+			return contain(x).detect(y);
+		}
 	}
 }

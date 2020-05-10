@@ -24,24 +24,39 @@ public class TimeEmail {
 		   if (read_or_write.equals("1")) { //if you choose to read
 		    Scanner input = new Scanner(System.in);
 		    System.out.println("Which year is this year?");
-		    int year=input.nextInt();
 		    System.out.println("You could email that is receive in this year and before.");
+		    int year=input.nextInt();	    
 		    System.out.println(timeLine.haveMessage(year));
-		    System.out.println("Which year do you want to read?");
-		    int yearR=input.nextInt();
-		    System.out.println("Which month you want to read? ");
-		    int month = input.nextInt();  
-		    System.out.println("Do you want to read all of it or one specific message? Type in 1 for alll the message and 2 for a specific one. ");
-		    int specific = input.nextInt();
-		      if(specific==1){
-		    	  System.out.println(timeLine.deleteAll(yearR, month));
-		      }
-			   
-		      if (specific==2) {
-		       System.out.println("Which message do you want to read? Type in numbers ");
-		       int i = input.nextInt();
-		       System.out.println(timeLine.delete(yearR, month, i));
-		   }
+		    if(timeLine.haveMessage(year).equals("There's no message yet, please write some message to yourself."))
+		    	continue;
+		    else
+		    {
+		    	System.out.println("Which year do you want to read?");
+			    int yearR=input.nextInt();
+			    System.out.println("Which month you want to read? ");
+			    int month = input.nextInt();  
+			    System.out.println("Do you want to read all of it or one specific message? Type in 1 for al l the message and 2 for a specific one. ");
+			    int specific = input.nextInt();
+			    if(timeLine.detect(yearR, month)==true)
+			    {
+			    	if(specific==1 ){
+				    	  System.out.println(timeLine.deleteAll(yearR, month));
+				      }
+					   
+				      if (specific==2 ) {
+				       System.out.println("Which message do you want to read? Type in numbers ");
+				       int i = input.nextInt();
+				       System.out.println(timeLine.delete(yearR, month, i));
+				   }
+				  else
+				  {
+					  System.out.println("There's no message at that time. Please write some message to yourself.");
+				}
+		    }
+		    
+		    }
+		   
+		      
 		  }
 		    else if (read_or_write.equals("2")) {
 		     Scanner inn = new Scanner(System.in);
