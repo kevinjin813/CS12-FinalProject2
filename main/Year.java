@@ -11,7 +11,15 @@ public class Year {
 	{
 		this.year=year;
 	}
-	
+	public boolean contain(int x)
+	{
+		if(months[x].num!=0)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
 	public void receiveLetter(int month,String mail)
 	{
 		if(months[month]==null)

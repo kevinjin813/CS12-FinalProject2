@@ -15,11 +15,15 @@ public class DLL {
 	{
 		Year temp=new Year(x);
 		Year curr=head;
-		while(curr!=null && curr.year!=x)
+		while(curr!=null && curr.year!=temp.year)
 		{
 			curr=curr.next;
 		}
-		if(curr.year!=temp.year)
+		if(curr==null)
+		{
+			return null;
+		}
+		else if(curr.year!=x)
 		{
 			return null;
 		}
@@ -47,6 +51,7 @@ public class DLL {
 		if(head==null)
 		{
 			head=temp;
+			tail=temp;
 		}
 		if(head.year>x)
 		{
@@ -67,10 +72,21 @@ public class DLL {
 				curr=curr.next;
 			}
 			temp.next=curr.next;
-			curr.next.prev=temp;
-			curr.next=temp;
-			temp.prev=curr;
+			if(curr.next==null)
+			{
+				curr.next=temp;
+				temp.prev=curr;
+				tail=temp;
+			}
+			else
+			{
+				curr.next.prev=temp;
+				curr.next=temp;
+				temp.prev=curr;
+			}
+			temp.receiveLetter(y, message);	
 		}
+		
 	}
 	public String delete(int x,int y,int i)
 	{
