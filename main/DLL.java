@@ -100,4 +100,16 @@ public class DLL {
 		String result=curr.takeAllLetter(y);
 		return result;
 	}
+	public String haveMessage(int x)
+	{
+		String result="";
+		Year curr=head;
+		result=result+curr.count_message();
+		while(curr.next!=null && curr.next.year<=x)
+		{
+			curr=curr.next;
+			result=result+curr.count_message();
+		}
+		return result;
+	}
 }

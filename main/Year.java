@@ -45,4 +45,13 @@ public class Year {
 		}
 		return result;
 	}
+	public String count_message()
+	{
+		String result="";
+		for(Month i:months)
+		{
+			result=result+"In "+i.month+" "+year+", you have received "+i.num+" emails.\n";
+		}
+		return result;
+	}
 }

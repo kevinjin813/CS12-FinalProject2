@@ -9,6 +9,12 @@ public class Month {
 	public Month(int month)
 	{
 		num=0;
+		if(month==1)
+			this.month="January";
+		if(month==2)
+			this.month="February";
+		
+		
 	}
 	public void takeIn(String message)
 	{
