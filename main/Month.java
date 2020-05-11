@@ -27,7 +27,7 @@ public class Month {
 			this.month="August";
 		if(month==9)
 			this.month="September";
-		if(month=10)
+		if(month==10)
 			this.month="October";
 		if(month==11)
 			this.month="November";

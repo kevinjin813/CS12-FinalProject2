@@ -35,7 +35,7 @@ public class TimeEmail {
 			    int yearR=input.nextInt();
 			    System.out.println("Which month you want to read? ");
 			    int month = input.nextInt();  
-			    System.out.println("Do you want to read all of it or one specific message? Type in 1 for al l the message and 2 for a specific one. ");
+			    System.out.println("Do you want to read all of it or one specific message? Type in 1 for all the message and 2 for a specific one. ");
 			    int specific = input.nextInt();
 			    if(timeLine.detect(yearR, month)==true)
 			    {
