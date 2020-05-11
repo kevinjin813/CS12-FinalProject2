@@ -13,6 +13,26 @@ public class Month {
 			this.month="January";
 		if(month==2)
 			this.month="February";
+		if(month==3)
+			this.month="March";
+		if(month==4)
+			this.month="April";
+		if(month==5)
+			this.month="May";
+		if(month==6)
+			this.month="June";
+		if(month==7)
+			this.month="July";
+		if(month==8)
+			this.month="August";
+		if(month==9)
+			this.month="September";
+		if(month=10)
+			this.month="October";
+		if(month==11)
+			this.month="November";
+		if(month==12)
+			this.month="December";
 		
 		
 	}
