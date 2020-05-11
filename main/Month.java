@@ -1,11 +1,17 @@
 package main;
-
+/**
+ * This is the month class that record the email in this month.
+ */
 import java.util.ArrayList;
 
 public class Month {
 	ArrayList<String> message=new ArrayList<String>();
 	String month;
 	int num;
+	/**
+	 * Construct the month object
+	 * @param month  the month number
+	 */
 	public Month(int month)
 	{
 		num=0;
@@ -36,16 +42,30 @@ public class Month {
 		
 		
 	}
+	/**
+	 * Take in the message and store it with an array list
+	 * @param message
+	 */
 	public void takeIn(String message)
 	{
 		num++;
 		this.message.add(message);
 	}
+	/**
+	 * Take out specific one message
+	 * @param x  the xth messeage
+	 * @return   the message stored
+	 */
 	public String takeOut(int x)
 	{
 		String result="Message "+x+" to you is: "+message.get(x-1);
 		return result;
 	}
+	
+	/**
+	 * Take all the message stored
+	 * @return  the message stored
+	 */
 	public String[] takeAll()
 	{
 		String[] result=new String[num];
@@ -57,11 +77,18 @@ public class Month {
 		}
 		return result;
 	}
+	/**
+	 * Delete the message once finished reading
+	 * @param x
+	 */
 	public void delete(int x)
 	{
 		message.remove(x-1);
 		num--;
 	}
+	/**
+	 * Delete all the message once finished reading
+	 */
 	public void deleteAll()
 	{
 		message.clear();

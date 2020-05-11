@@ -1,5 +1,7 @@
 package main;
-
+/**
+ * This class is the main program that ask user what they want to do.
+ */
 import java.util.Scanner;
 
 
@@ -58,7 +60,7 @@ public class TimeEmail {
 		   
 		      
 		  }
-		    else if (read_or_write.equals("2")) {
+		    else if (read_or_write.equals("2")) {// if you choose to write
 		     Scanner inn = new Scanner(System.in);
 		     System.out.println("Which year and month do you want to read in the future?");
 		     int year = inn.nextInt();

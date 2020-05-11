@@ -1,16 +1,25 @@
 package main;
-
+/**
+ * This class construct a doublinked list to store the year and arrange them in correct order.
+ */
 public class DLL {
 	Year head;
 	Year tail;
 	int num;
-	
+	/**
+	 * Construct the list
+	 */
 	public DLL()
 	{
 		head=null;
 		tail=head;
 		num=0;
 	}
+	/**
+	 * Find out the x year
+	 * @param x	the number of year
+	 * @return  the year object
+	 */
 	public Year contain(int x)
 	{
 		Year temp=new Year(x);
@@ -33,6 +42,11 @@ public class DLL {
 		}
 		
 	}
+	/**
+	 * Determine whether have this year
+	 * @param x   the year
+	 * @return   have or not
+	 */
 	public boolean have(int x)
 	{
 		if(contain(x)==null)
@@ -44,6 +58,12 @@ public class DLL {
 			return true;
 		}
 	}
+	/**
+	 * Insert message to year x, month y
+	 * @param x year
+	 * @param y month
+	 * @param message message to store
+	 */
 	public void insert(int x,int y,String message)
 	{
 		Year temp=new Year(x);
@@ -88,18 +108,36 @@ public class DLL {
 		}
 		
 	}
+	/**
+	 * Take out the ith message in year x month y and delete it
+	 * @param x  year
+	 * @param y  month
+	 * @param i  the ith 
+	 * @return
+	 */
 	public String delete(int x,int y,int i)
 	{
 		Year curr=contain(x);
 		String result=curr.takeithLetter(y, i);
 		return result;
 	}
+	/**
+	 * Take out all message in year x month y and delete it
+	 * @param x year
+	 * @param y month
+	 * @return  the messages
+	 */
 	public String deleteAll(int x,int y)
 	{
 		Year curr=contain(x);
 		String result=curr.takeAllLetter(y);
 		return result;
 	}
+	/**
+	 * Find out how many message this year have
+	 * @param x  the year
+	 * @return   how many message each month of this year have
+	 */
 	public String haveMessage(int x)
 	{
 		if(head==null)
@@ -114,6 +152,12 @@ public class DLL {
 		}
 		return result;
 	}
+	/**
+	 * Detect whether year x month y has message
+	 * @param x year
+	 * @param y month
+	 * @return have or not
+	 */
 	public boolean detect(int x,int y)
 	{
 		if(!have(x))
