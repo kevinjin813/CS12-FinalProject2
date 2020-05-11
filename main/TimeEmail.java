@@ -26,7 +26,7 @@ public class TimeEmail {
 		   if (read_or_write.equals("1")) { //if you choose to read
 		    Scanner input = new Scanner(System.in);
 		    System.out.println("Which year is this year?");
-		    System.out.println("You could email that is receive in this year and before.");
+		    System.out.println("You could read email that is receive in this year and before.");
 		    int year=input.nextInt();	    
 		    System.out.println(timeLine.haveMessage(year));
 		    if(timeLine.haveMessage(year).equals("There's no message yet, please write some message to yourself."))
@@ -50,11 +50,12 @@ public class TimeEmail {
 				       int i = input.nextInt();
 				       System.out.println(timeLine.delete(yearR, month, i));
 				   }
+			    }
 				  else
 				  {
 					  System.out.println("There's no message at that time. Please write some message to yourself.");
 				}
-		    }
+		    
 		    
 		    }
 		   
